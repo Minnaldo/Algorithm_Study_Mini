@@ -4,6 +4,7 @@ public class N과M_4 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		Scanner sc = new Scanner(System.in);
 		
 		int N = sc.nextInt();
@@ -27,6 +28,9 @@ public class N과M_4 {
 			System.out.println();
 			return;
 		}
+		
+		/*if(n == arr.length)
+			return;*/
 		
 		for(int i = n; i < arr.length; i++) {
 			result[c] = arr[i];

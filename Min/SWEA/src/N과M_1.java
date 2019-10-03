@@ -4,6 +4,7 @@ public class N과M_1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		Scanner sc = new Scanner(System.in);
 		
 		int N = sc.nextInt();
@@ -17,6 +18,7 @@ public class N과M_1 {
 		}
 		
 		perm(arr, 0, result, new boolean[N]);
+		
 	}
 	
 	static void perm(int[] arr, int c, int[] result, boolean[] visited) {
