@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//순열,, 중복이 없고, 순서가 있는, 자기자신은 안 포함!
 public class N과M_1 {
 
 	public static void main(String[] args) {
@@ -18,7 +19,6 @@ public class N과M_1 {
 		}
 		
 		perm(arr, 0, result, new boolean[N]);
-		
 	}
 	
 	static void perm(int[] arr, int c, int[] result, boolean[] visited) {

@@ -17,8 +17,8 @@ public class N과M_8 {
 			arr[i] = sc.nextInt();
 		}
 		
-		Arrays.sort(arr);
-		
+//		Arrays.sort(arr);
+
 		re_combi(arr, 0, 0, result);
 		
 	}
@@ -34,7 +34,7 @@ public class N과M_8 {
 		
 		for(int i = n; i < arr.length; i++) {
 			result[c] = arr[i];
-			re_combi(arr, n, c+1, result);
+			re_combi(arr, n+1, c+1, result);
 		}
 	}
 
