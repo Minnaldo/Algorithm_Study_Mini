@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+/* 주석 */
 //순열,, 중복이 없고, 순서가 있는, 자기자신은 안 포함!
 public class N과M_1 {
 
@@ -11,8 +11,8 @@ public class N과M_1 {
 		int N = sc.nextInt();
 		int M = sc.nextInt();
 		
-		int[] arr = new int[N];
-		int[] result = new int[M];
+		int[] arr = new int[N];	//3
+		int[] result = new int[M];	//2
 		
 		for(int i = 0; i < arr.length; i++) {
 			arr[i] = i+1;
@@ -22,7 +22,7 @@ public class N과M_1 {
 	}
 	
 	static void perm(int[] arr, int c, int[] result, boolean[] visited) {
-		if(c == result.length) {
+		if(c == result.length) {		
 			for(int i = 0; i < result.length; i++) {
 				System.out.print(result[i] + " ");
 			}
@@ -32,9 +32,9 @@ public class N과M_1 {
 		
 		for(int i = 0; i < arr.length; i++) {
 			if(visited[i] == false) {
-				result[c] = arr[i];
+				result[c] = arr[i];		
 				visited[i] = true;
-				perm(arr, c+1, result, visited);
+				perm(arr, c+1, result, visited);	
 				visited[i] = false;
 			}
 		}

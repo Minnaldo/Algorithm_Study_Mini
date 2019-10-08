@@ -56,8 +56,7 @@ public class 숫자사각형4 {
 		else if(num2 == 3) {
 			for(int i = 1; i <= num1; i++) {
 				for(int j = 1; j <= num1; j++) {
-					int m = 2;
-					System.out.print(i*m + " ");
+					System.out.print(i*j + " ");
 				}
 				System.out.println();
 			}
