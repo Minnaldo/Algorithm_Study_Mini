@@ -61,10 +61,31 @@ public class 별삼각형2 {
 				for(int j = 0; j < num1/2-i-1; j++) {
 					System.out.print(" ");
 				}
-				for(int k = 0; k < num1; k++) {
+				for(int k = 0; k < 2*(i+1) + 1; k++) {
 					System.out.print("*");
 				}
 
+				System.out.println();
+			}
+		}
+		
+		else if(num2 == 4) {
+			for(int i = 0; i < num1/2+1; i++) {
+				for(int j = 0; j < i; j++) {
+					System.out.print(" ");
+				}
+				for(int k = i; k < num1/2+1; k++) {
+					System.out.print("*");
+				}
+				System.out.println();
+			}
+			for(int i = 0; i < num1/2; i++) {
+				for(int j = 0; j < num1/2; j++) {
+					System.out.print(" ");
+				}
+				for(int j = 0; j <= i+1; j++) {
+					System.out.print("*");
+				}
 				System.out.println();
 			}
 		}

@@ -1,34 +1,30 @@
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Scanner;
+import java.util.Stack;
 
-public class 큐 {
+public class 스택 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		
-		Queue<String> queue = new LinkedList<String>();
-		
+
+		Stack<String> stack = new Stack<String>();
+
 		int N = sc.nextInt();
 		for(int i = 0; i < N; i++) {
 			char ch = sc.next().charAt(0);
-			
+
 			if(ch == 'i') {
-				queue.offer(sc.next());
-//				queue.add(sc.next());
+				stack.add(sc.next());
 			}
 			else if(ch == 'c') {
-				System.out.println(queue.size());
+				System.out.println(stack.size());
 			}
 			else if(ch == 'o') {
-				if(queue.isEmpty())
+				if(stack.isEmpty())
 					System.out.println("empty");
 				else
-					System.out.println(queue.poll());
+					System.out.println(stack.pop());
 			}
 		}
-		
 	}
-
 }
