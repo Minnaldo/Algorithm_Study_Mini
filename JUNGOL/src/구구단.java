@@ -6,18 +6,35 @@ public class 구구단 {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 
-		int num1 = sc.nextInt();
-		int num2 = sc.nextInt();
-		
 		while(true) {
-			if(num1 == num2) {
+			int num1 = sc.nextInt();
+			int num2 = sc.nextInt();
+			
+			if(num1 < 2 || num1 > 9 || num2 < 2 || num2 > 9)
+			{
+				System.out.println("INPUT ERROR!");
+			}
+
+			else if(num1 > num2) {
+				for(int i = 1; i <= 9; i++) {
+					for(int j = num1; j >= num2; j--) {
+						System.out.printf("%d * %d = %2d   ",j,i,j*i);
+					}
+					System.out.println();
+				}
 				break;
 			}
-			
-			for(int i = 1; i <=9 ; i++) {
-				
+			else if(num1 <= num2) {
+				for(int i = 1; i <= 9; i++) {
+					for(int j = num1; j <= num2; j++) {
+						System.out.printf("%d * %d = %2d   ",j,i,j*i);
+					}
+					System.out.println();
+				}
+				break;
 			}
-		}
-	}
 
+		}
+
+	}
 }

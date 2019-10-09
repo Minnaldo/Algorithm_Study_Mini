@@ -9,17 +9,42 @@ public class 구구단2 {
 		while(true) {
 			int num1 = sc.nextInt();
 			int num2 = sc.nextInt();
-			for(int i = 1; i <= 9; i++) {
-				System.out.printf("%d * %d = %2d   ", num1,i,num1*i);
-				if(i % 3 == 0)
+			
+			if(num1 > num2) {
+				for(int i = num1; i >= num2; i--) {
+					for(int j = 1; j <= 3; j++) {
+						System.out.printf("%d * %d = %2d   ", i, j, i*j);
+					}
 					System.out.println();
-
+					for(int j = 4; j <= 6; j++) {
+						System.out.printf("%d * %d = %2d   ", i, j, i*j);
+					}
+					System.out.println();
+					for(int j = 7; j <= 9; j++) {
+						System.out.printf("%d * %d = %2d   ", i, j, i*j);
+					}
+					
+					System.out.println();
+					System.out.println();
+				}
 			}
-			System.out.println();
-			for(int i = 1; i <= 9; i++) {
-				System.out.printf("%d * %d = %2d   ", num2,i,num2*i);
-				if(i % 3 == 0)
+			else if(num1 <= num2) {
+				for(int i = num1; i <= num2; i++) {
+					for(int j = 1; j <= 3; j++) {
+						System.out.printf("%d * %d = %2d   ", i, j, i*j);
+					}
 					System.out.println();
+					for(int j = 4; j <= 6; j++) {
+						System.out.printf("%d * %d = %2d   ", i, j, i*j);
+					}
+					System.out.println();
+					for(int j = 7; j <= 9; j++) {
+						System.out.printf("%d * %d = %2d   ", i, j, i*j);
+					}
+					
+					System.out.println();
+					System.out.println();
+				}
 			}
 		}
 	}
