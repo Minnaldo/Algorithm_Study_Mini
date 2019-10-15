@@ -5,67 +5,59 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class 유기농배추 {
+public class 유기농배추_Practice {
 
-	static int T;	//테스트 케이스
-	static int M;	//배추밭 가로길이
-	static int N;	//배추밭 세로길이
-	static int K;	//배추가 심어져 있는 위치의 개수
+	static int T;
+	static int M;
+	static int N;
+	static int K;
 	static int result;
-
+	
 	static int[][] map;
 	static boolean[] visited;
-
-	static BufferedReader br;
-	static BufferedWriter bw;
-
-	static int[] dx = { -1, 1, 0, 0 };
-	static int[] dy = { 0, 0, -1, 1 };
-
-	static boolean inMap(int x, int y) {
-		return x >= 0 && y >= 0 && x < M && y < N;
-	}
-
+	
+	static int[] dx = {-1, 1, 0, 0 };
+	static int[] dy = {0, 0, -1, 1 };
+	
+	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+	
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// TODO Auto-generated method stub
-		br = new BufferedReader(new InputStreamReader(System.in));
-		bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
 		T = Integer.parseInt(br.readLine());
 		for(int tc = 1; tc <= T; tc++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			M = Integer.parseInt(st.nextToken());
 			N = Integer.parseInt(st.nextToken());
 			K = Integer.parseInt(st.nextToken());
-
+			
 			map = new int[N+2][M+2];
-
-			for(int tt = 1; tt <= K; tt++) {
+			
+			for(int i = 1; i <= K; i++) {
 				st = new StringTokenizer(br.readLine());
 				int temp1 = Integer.parseInt(st.nextToken());
 				int temp2 = Integer.parseInt(st.nextToken());
-
+				
 				map[temp2+1][temp1+1] = 1;
 			}
-
+			
 			result = 0;
 			for(int i = 1; i <= N; i++) {
 				for(int j = 1; j <= M; j++) {
 					if(map[i][j] == 1) {
 						result++;
-						dfs(i, j);
+						DFS(i,j);
 					}
 				}
 			}
-
-			bw.write(result+"");
+			
+			bw.write(result + "");
 			bw.write("\n");
 			bw.flush();
 		}
 	}
-	
-	
-	private static void dfs(int x, int y) {
+
+	private static void DFS(int x, int y) {
 		// TODO Auto-generated method stub
 		map[x][y] = 0;
 		
@@ -74,11 +66,9 @@ public class 유기농배추 {
 			int ny = y + dy[i];
 			
 			if(map[nx][ny] == 1) {
-				dfs(nx,ny);
+				DFS(nx, ny);
 			}
 		}
 	}
-
-
 
 }
