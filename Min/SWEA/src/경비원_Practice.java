@@ -80,19 +80,19 @@ public class 경비원_Practice {
 		st = new StringTokenizer(br.readLine());
 		dong[0] = Integer.parseInt(st.nextToken());		//dong_direction
 		dong[1] = Integer.parseInt(st.nextToken());		//dong_distance
-		//동근이 위치
-		if(dong[0]  == 1) {
-			map[0][dong[1]] = 7;
-		}
-		else if(dong[0]  == 2) {
-			map[M][dong[1]] = 7;
-		}
-		else if(dong[0]  == 3) {
-			map[dong[1]][0] = 7;
-		}
-		else if(dong[0]  == 4) {
-			map[dong[1]][N] = 7;
-		}
+//		//동근이 위치
+//		if(dong[0]  == 1) {
+//			map[0][dong[1]] = 7;
+//		}
+//		else if(dong[0]  == 2) {
+//			map[M][dong[1]] = 7;
+//		}
+//		else if(dong[0]  == 3) {
+//			map[dong[1]][0] = 7;
+//		}
+//		else if(dong[0]  == 4) {
+//			map[dong[1]][N] = 7;
+//		}
 
 		int sum = 0;
 		int idx = 0;
