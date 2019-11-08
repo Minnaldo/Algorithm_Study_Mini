@@ -30,18 +30,19 @@ public class 마방진 {
 			if(cnt == N*N)
 				break;
 
-			int loc_x = x;
-			int loc_y = y;
+								//이동할 위치는 : 대각선 우측위
+			int loc_x = x;		//이동할 위치의 x좌표 를 만들어준다.
+			int loc_y = y;		//이동할 위치의 y좌표 를 만들어준다.
 
-			loc_x--;
-			loc_y++;
+			loc_x--;			//x좌표를 이동할 위치로 만들어준다.
+			loc_y++;			//y좌표를 이동할 위치로 만들어준다.
 
-			if(loc_x < 0)
-				loc_x = N-1;
-			if(loc_y > N-1)
-				loc_y = 0;
-			if(loc_x > N-1)
-				loc_x = 0;
+			if(loc_x < 0)			//첫 행이라면
+				loc_x = N-1;			//마지막 행으로 이동
+			if(loc_y > N-1)			//마지막 열이라면
+				loc_y = 0;				//첫 열로 이동
+			if(loc_x > N-1)			//마지막 행이라면
+				loc_x = 0;				//첫 행으로 이동
 
 			//대각선 오른쪽 위
 			if(arr[loc_x][loc_y] > 0) {
