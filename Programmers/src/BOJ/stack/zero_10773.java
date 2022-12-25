@@ -1,4 +1,4 @@
-package BOJ.greedy;
+package BOJ.stack;
 
 import java.io.*;
 import java.util.Stack;
