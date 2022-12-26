@@ -22,11 +22,16 @@ public class josepuse_11866 {
         while(!queue.isEmpty())
         {
             cnt++;
+
+            bw.write("<");
             if(cnt == K)
             {
-                System.out.println(queue.poll());
+                bw.write(queue.poll());
             }
 
+            
+
+            bw.write(", ");
 
         }
 
